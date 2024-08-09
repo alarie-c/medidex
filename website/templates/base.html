@@ -4,14 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Home - MediDex{% endblock %}</title>
-    <link rel="stylesheet" href="..static/styles.css">
+    <link href="../static/styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-    <nav class="navbar">
+    <header class="nav">
         <button class="nav-button">Home</button>
         <button class="nav-button">Search</button>
         <button class="nav-button">About</button>
         <button class="nav-button">Contact</button>
-    </nav>
+    </header>
+
+    <!-- This is the title/class/desc of the drug -->
+    <h1 class="drug-name">{% block name %}DrugName{% endblock %}</h1>
+    <h3 class="drug-class">{% block clas %}DrugClass{% endblock %}</h2>
+    <p class="drug-desc">{% block desc %}DrugDescription{% endblock %}</p>
+
+    <!-- Function --> <h2 class="drug-header">Function</h2>
+    <p class="drug-desc">{% block func %}DrugFunction{% endblock %}</p>
+
+    <!-- Administration --> <h2 class="drug-header">Administration</h2>
+    <p class="drug-desc">{% block admin %}DrugAdministration{% endblock %}</p>
+
+    <!-- Side Effects --> <h2 class="drug-header">Side Effects</h2>
+    <p class="drug-desc">{% block effects %}DrugSideEffects{% endblock %}</p>
+
+    <!-- Brands --> <h2 class="drug-header">Brands</h2>
+    <p class="drug-desc">{% block brands %}DrugBrands{% endblock %}</p>
+
+    <!-- Information ctiations -->
+    <h2 class="drug-header">Citations</h2>
+    <!-- <div class="citation">
+        <h3>National Library of Medicine</h3>
+        <p>medlineplus.gov</p>
+        <p>View source: https://medlineplus.gov/druginfo/meds/a601209.html</p>
+    </div> -->
 </body>
 </html>
